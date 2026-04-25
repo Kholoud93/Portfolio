@@ -34,7 +34,7 @@ export function Stack() {
         <div className="grid grid-cols-12 gap-6 mb-16 md:mb-24">
           <div className="col-span-12 md:col-span-5">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/50 mb-4">
-              § 04 — Toolkit
+              § 05 — Toolkit
             </p>
             <h2 className="font-display text-6xl md:text-8xl leading-[0.9] tracking-tight">
               Stack &<br />

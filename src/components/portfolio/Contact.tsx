@@ -32,7 +32,9 @@ export function Contact() {
               <span className="text-stroke-ember italic">something.</span>
             </motion.h2>
             <a
-              href="mailto:khloudayman97@gmail.com"
+              href="https://wa.me/201555586173"
+              target="_blank"
+              rel="noreferrer noopener"
               className="inline-flex items-center gap-4 mt-12 group"
             >
               <span className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-ember flex items-center justify-center group-hover:scale-110 transition-transform shadow-ember">

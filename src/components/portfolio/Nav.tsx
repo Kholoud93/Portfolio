@@ -52,7 +52,9 @@ export function Nav() {
           ))}
         </ul>
         <a
-          href="mailto:khloudayman97@gmail.com"
+          href="https://wa.me/201555586173"
+          target="_blank"
+          rel="noreferrer noopener"
           className="hidden md:inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-ink bg-ember px-4 py-2 rounded-full hover:scale-105 transition-transform"
         >
           Hire me

@@ -118,6 +118,7 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     background-color: var(--color-background);
@@ -126,6 +127,9 @@
     font-feature-settings: "ss01", "cv11";
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+  }
+  section[id] {
+    scroll-margin-top: 80px;
   }
   body::before {
     content: "";

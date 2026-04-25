@@ -7,6 +7,19 @@ export function Nav() {
     { label: "Stack", href: "#stack" },
     { label: "Contact", href: "#contact" },
   ];
+
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const id = href.replace("#", "");
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", href);
+    } else if (id === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.header
       initial={{ y: -40, opacity: 0 }}
@@ -15,7 +28,11 @@ export function Nav() {
       className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/40 border-b border-border"
     >
       <nav className="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-3 group">
+        <a
+          href="#top"
+          onClick={(e) => handleNavClick(e, "#top")}
+          className="flex items-center gap-3 group"
+        >
           <span className="h-2 w-2 rounded-full bg-ember animate-pulse-ember" />
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-bone/80 group-hover:text-ember transition-colors">
             Kholoud / Frontend Engineer
@@ -26,6 +43,7 @@ export function Nav() {
             <li key={l.label}>
               <a
                 href={l.href}
+                onClick={(e) => handleNavClick(e, l.href)}
                 className="font-mono text-xs uppercase tracking-[0.2em] text-bone/70 hover:text-ember transition-colors"
               >
                 {l.label}

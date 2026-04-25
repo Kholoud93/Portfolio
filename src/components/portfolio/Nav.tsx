@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 export function Nav() {
   const links = [
     { label: "Work", href: "#work" },
+    { label: "Lab", href: "#lab" },
     { label: "About", href: "#about" },
     { label: "Stack", href: "#stack" },
     { label: "Contact", href: "#contact" },

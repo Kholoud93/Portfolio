@@ -38,7 +38,7 @@ export function About() {
         <div className="grid grid-cols-12 gap-6 mb-20">
           <div className="col-span-12 md:col-span-4">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/50 mb-4">
-              § 03 — Curriculum
+              § 04 — Curriculum
             </p>
             <h2 className="font-display text-6xl md:text-8xl leading-[0.9] tracking-tight">
               The

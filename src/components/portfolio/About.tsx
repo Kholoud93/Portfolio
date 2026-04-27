@@ -31,9 +31,17 @@ const experience = [
   },
 ];
 
+const focusAreas = [
+  "React.js and Next.js applications for SaaS and high-conversion products",
+  "Vue.js and Nuxt.js implementations with scalable component architecture",
+  "React Native mobile products with production API integrations",
+  "CRM systems and internal dashboards with complex data workflows",
+  "Booking systems, landing pages, and reusable UI systems",
+];
+
 export function About() {
   return (
-    <section id="about" className="relative py-24 md:py-40 px-6 md:px-10 bg-card">
+    <section id="about" className="section-shell bg-card/65">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-12 gap-6 mb-20">
           <div className="col-span-12 md:col-span-4">
@@ -48,17 +56,46 @@ export function About() {
           </div>
           <div className="col-span-12 md:col-span-7 md:col-start-6">
             <p className="font-display text-2xl md:text-3xl leading-snug text-bone/90">
-              <span className="text-ember">"</span>I enjoy working in collaborative
-              environments, solving real business problems, and turning
-              requirements into reliable production-ready solutions.<span className="text-ember">"</span>
+              <span className="text-ember">"</span>I transform product goals into dependable frontend systems that teams can
+              extend quickly and users can trust.<span className="text-ember">"</span>
             </p>
             <p className="font-mono text-xs uppercase tracking-[0.25em] text-bone/50 mt-6">
-              — From the cover letter
+              — Delivery philosophy
             </p>
           </div>
         </div>
 
-        {/* Timeline */}
+        <div className="grid grid-cols-12 gap-6 mb-20">
+          <div className="col-span-12 md:col-span-4">
+            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/50">
+              Core experience
+            </p>
+          </div>
+          <ul className="col-span-12 md:col-span-8 space-y-3">
+            {focusAreas.map((area) => (
+              <li key={area} className="text-bone/80 text-base md:text-lg leading-relaxed flex items-start gap-3">
+                <span className="text-ember mt-2">—</span>
+                <span>{area}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-20">
+          <div className="surface-card ring-premium rounded-2xl p-5 md:p-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-bone/55 mb-2">Experience</p>
+            <p className="font-display text-4xl text-bone">3+ years</p>
+          </div>
+          <div className="surface-card ring-premium rounded-2xl p-5 md:p-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-bone/55 mb-2">Core focus</p>
+            <p className="font-display text-4xl text-bone">Frontend Systems</p>
+          </div>
+          <div className="surface-card ring-premium rounded-2xl p-5 md:p-6">
+            <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-bone/55 mb-2">Delivery mode</p>
+            <p className="font-display text-4xl text-bone">Remote-first</p>
+          </div>
+        </div>
+
         <div className="border-t border-border">
           {experience.map((e, i) => (
             <motion.div
@@ -92,7 +129,6 @@ export function About() {
           ))}
         </div>
 
-        {/* Education + languages */}
         <div className="grid grid-cols-12 gap-6 mt-20">
           <div className="col-span-12 md:col-span-6">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/50 mb-6">

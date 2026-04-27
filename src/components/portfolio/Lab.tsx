@@ -109,7 +109,6 @@ export function Lab() {
   return (
     <section id="lab" className="relative py-24 md:py-40 px-6 md:px-10 border-t border-border">
       <div className="max-w-[1400px] mx-auto">
-        {/* Header */}
         <div className="grid grid-cols-12 gap-6 mb-16 md:mb-24 items-end">
           <div className="col-span-12 md:col-span-5">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/50 mb-4">
@@ -144,7 +143,6 @@ export function Lab() {
           </div>
         </div>
 
-        {/* Grid */}
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
           {repos.map((r, i) => (
             <motion.li

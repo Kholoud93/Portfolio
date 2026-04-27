@@ -11,31 +11,32 @@ const links = [
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-24 md:py-40 px-6 md:px-10 overflow-hidden">
+    <section id="contact" className="section-shell overflow-hidden">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-12 gap-6">
+        <div className="surface-card ring-premium rounded-2xl grid grid-cols-12 gap-6 p-6 md:p-10">
           <div className="col-span-12 md:col-span-7">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/50 mb-6">
-              § 06 — Coda
+              § 07 — Contact CTA
             </p>
             <motion.h2
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-[clamp(3.5rem,10vw,10rem)] leading-[0.85] tracking-[-0.02em]"
+              className="font-display text-[clamp(2.9rem,10vw,8.2rem)] leading-[0.85] tracking-[-0.02em]"
             >
-              Let's
+              Let’s
               <br />
-              <span className="italic text-ember">build</span>
+              <span className="italic text-ember">build your</span>
               <br />
-              <span className="text-stroke-ember italic">something.</span>
+              <span className="text-stroke-ember italic">next product.</span>
             </motion.h2>
             <a
               href="https://wa.me/201555586173"
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-4 mt-12 group"
+              className="inline-flex items-center gap-4 mt-10 group"
+              aria-label="Start conversation on WhatsApp"
             >
               <span className="h-16 w-16 md:h-20 md:w-20 rounded-full bg-ember flex items-center justify-center group-hover:scale-110 transition-transform shadow-ember">
                 <ArrowUpRight className="w-7 h-7 text-ink" />
@@ -55,8 +56,9 @@ export function Contact() {
                     target={href.startsWith("http") ? "_blank" : undefined}
                     rel="noreferrer noopener"
                     className="flex items-center gap-4 group py-3 border-b border-border hover:border-ember transition-colors"
+                    aria-label={label}
                   >
-                    <Icon className="w-4 h-4 text-bone/50 group-hover:text-ember transition-colors flex-shrink-0" />
+                    <Icon className="w-4 h-4 text-bone/50 group-hover:text-ember transition-colors shrink-0" />
                     <span className="font-mono text-xs uppercase tracking-[0.15em] text-bone/80 group-hover:text-bone transition-colors break-all">
                       {label}
                     </span>
@@ -67,11 +69,10 @@ export function Contact() {
           </div>
         </div>
 
-        {/* Footer strip */}
-        <div className="mt-32 pt-8 border-t border-border flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] uppercase tracking-[0.25em] text-bone/40">
+        <div className="mt-14 pt-7 border-t border-border flex flex-wrap items-center justify-between gap-4 font-mono text-[11px] uppercase tracking-[0.25em] text-bone/40">
           <span>© Kholoud Ayman · MMXXVI</span>
-          <span>Crafted in Alexandria · Built with React + TanStack</span>
-          <span>End of monograph</span>
+          <span>CraftFolio · React + TanStack</span>
+          <span>Open to remote frontend opportunities</span>
         </div>
       </div>
     </section>

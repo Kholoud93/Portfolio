@@ -1,35 +1,36 @@
 import { motion } from "framer-motion";
+import { Braces, Palette, Database, Rocket } from "lucide-react";
 
 const groups = [
   {
-    title: "Frameworks",
-    items: ["React.js", "Next.js", "Vue.js", "Nuxt 3", "React Native"],
-  },
-  {
-    title: "Languages",
-    items: ["TypeScript", "JavaScript ES6+", "HTML5", "CSS3"],
-  },
-  {
-    title: "State & Data",
-    items: ["Redux Toolkit", "Zustand", "Pinia", "React Query", "Axios"],
+    title: "Frontend",
+    items: ["React", "Next", "Vue", "Nuxt", "JavaScript", "TypeScript"],
+    level: 95,
+    icon: Braces,
   },
   {
     title: "Styling",
-    items: ["Tailwind CSS", "Sass", "Material UI", "Bootstrap"],
+    items: ["Tailwind", "CSS", "Responsive Design"],
+    level: 92,
+    icon: Palette,
   },
   {
-    title: "Engineering",
-    items: ["Git · GitHub", "Docker", "Linux", "CI/CD", "Jest"],
+    title: "State",
+    items: ["Redux", "Zustand", "Pinia"],
+    level: 90,
+    icon: Database,
   },
   {
-    title: "Practice",
-    items: ["Performance", "Accessibility", "SEO", "Responsive · Mobile-first", "Agile / Scrum"],
+    title: "Other",
+    items: ["Git", "REST APIs", "Performance", "SEO"],
+    level: 91,
+    icon: Rocket,
   },
 ];
 
 export function Stack() {
   return (
-    <section id="stack" className="relative py-24 md:py-40 px-6 md:px-10">
+    <section id="stack" className="section-shell">
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-12 gap-6 mb-16 md:mb-24">
           <div className="col-span-12 md:col-span-5">
@@ -43,13 +44,12 @@ export function Stack() {
           </div>
           <div className="col-span-12 md:col-span-6 md:col-start-7 self-end">
             <p className="text-lg text-bone/70 leading-relaxed">
-              The instruments I reach for daily — chosen for clarity,
-              maintainability, and the kind of performance users actually feel.
+              The technologies I use to deliver maintainable, performant products that stay consistent across devices and grow with business needs.
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border border border-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {groups.map((g, i) => (
             <motion.div
               key={g.title}
@@ -57,26 +57,41 @@ export function Stack() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="bg-background p-8 md:p-10 group hover:bg-card transition-colors"
+              className="surface-card ring-premium rounded-2xl p-8 md:p-10 group"
             >
               <div className="flex items-center justify-between mb-6">
-                <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-bone/50">
+                <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-bone/60">
                   {g.title}
                 </p>
-                <span className="font-mono text-[11px] text-ember">
-                  0{i + 1}
-                </span>
+                <div className="h-8 w-8 rounded-full bg-background/60 border border-border flex items-center justify-center">
+                  <g.icon className="w-4 h-4 text-ember" />
+                </div>
               </div>
-              <ul className="space-y-2">
+              <ul className="flex flex-wrap gap-2 mb-7">
                 {g.items.map((it) => (
                   <li
                     key={it}
-                    className="font-display text-2xl md:text-3xl leading-tight text-bone/90 group-hover:text-bone transition-colors"
+                    className="rounded-full border border-border bg-background/55 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-bone/85"
                   >
                     {it}
                   </li>
                 ))}
               </ul>
+              <div className="space-y-2">
+                <div className="flex items-center justify-between font-mono text-[11px] uppercase tracking-[0.18em]">
+                  <span className="text-bone/60">Proficiency</span>
+                  <span className="text-ember">{g.level}%</span>
+                </div>
+                <div className="h-2 rounded-full bg-background/65 border border-border overflow-hidden">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${g.level}%` }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: i * 0.08 }}
+                    className="h-full rounded-full bg-gradient-to-r from-ember to-violet-400"
+                  />
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

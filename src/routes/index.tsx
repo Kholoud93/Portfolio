@@ -3,9 +3,9 @@ import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
 import { Marquee } from "@/components/portfolio/Marquee";
 import { Work } from "@/components/portfolio/Work";
-import { Lab } from "@/components/portfolio/Lab";
 import { About } from "@/components/portfolio/About";
 import { Stack } from "@/components/portfolio/Stack";
+import { Hire } from "@/components/portfolio/Hire";
 import { Contact } from "@/components/portfolio/Contact";
 
 export const Route = createFileRoute("/")({
@@ -23,6 +23,12 @@ export const Route = createFileRoute("/")({
         content:
           "Selected work, stack, and résumé of Kholoud Ayman — a frontend engineer crafting production-ready interfaces.",
       },
+      { name: "twitter:title", content: "Kholoud Ayman — Frontend Engineer" },
+      {
+        name: "twitter:description",
+        content:
+          "Frontend engineer delivering scalable React, Next.js, Vue and Nuxt products for global teams.",
+      },
     ],
   }),
   component: Index,
@@ -35,9 +41,9 @@ function Index() {
       <Hero />
       <Marquee />
       <Work />
-      <Lab />
       <About />
       <Stack />
+      <Hire />
       <Contact />
     </main>
   );

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import megabox from "@/assets/project-megabox.jpg";
 import qebaa from "@/assets/project-qebaa.jpg";
 import dashboard from "@/assets/project-dashboard.jpg";
-import aldarImage from "@/assets/Aldar.png";
+import applyFlowImage from "@/assets/applyFlow.jfif";
 import pulseTrainingImage from "@/assets/pulse-trainig.png";
 import { ArrowUpRight, Github } from "lucide-react";
 
@@ -54,18 +54,18 @@ const projects = [
   },
   {
     n: "03",
-    name: "AL DAR",
-    tag: "Landing Platform",
-    year: "2025",
-    role: "Frontend Developer",
-    stack: ["Next.js", "React", "TypeScript", "REST APIs"],
-    problem: "The business needed a high-conversion web presence that communicates trust and drives qualified inquiries.",
-    built: "A performance-focused landing experience with reusable sections, conversion CTAs, and SEO-ready page structure.",
-    features: ["Reusable section-based architecture", "Semantic content and metadata strategy", "Fast-loading responsive pages"],
-    value: "Increased lead quality and strengthened brand credibility for digital campaigns.",
-    github: "https://github.com/Kholoud93/AL-DAR",
-    live: "https://al-dar.vercel.app/",
-    img: aldarImage,
+    name: "ApplyFlow",
+    tag: "SaaS · Productivity",
+    year: "2026",
+    role: "Frontend Engineering",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind"],
+    problem: "Job seekers lacked a structured way to track applications, deadlines, and interview stages across multiple companies.",
+    built: "A Kanban-style job tracker with dashboard analytics, calendar view, and drag-and-drop board for managing application stages.",
+    features: ["Drag-and-drop status board with stage columns", "Dashboard with application analytics", "Calendar view for deadline tracking"],
+    value: "Streamlined the job search workflow, helping users stay organized and never miss follow-ups or deadlines.",
+    github: "https://github.com/Kholoud93/ApplyFlow",
+    live: "https://apply-flow-delta.vercel.app/board",
+    img: applyFlowImage,
   },
   {
     n: "04",

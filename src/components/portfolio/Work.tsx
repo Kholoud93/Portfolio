@@ -4,6 +4,7 @@ import qebaa from "@/assets/project-qebaa.jpg";
 import dashboard from "@/assets/project-dashboard.jpg";
 import applyFlowImage from "@/assets/applyFlow.jfif";
 import pulseTrainingImage from "@/assets/pulse-trainig.png";
+import orphanyImage from "@/assets/orphany.jfif";
 import { ArrowUpRight, Github } from "lucide-react";
 
 const cardReveal = {
@@ -82,11 +83,26 @@ const projects = [
     live: "",
     img: pulseTrainingImage,
   },
+  {
+    n: "05",
+    name: "Orphany – Smart Charity & Orphan Sponsorship Platform",
+    tag: "Non-profit · Social Impact",
+    year: "2026",
+    role: "Frontend Engineering",
+    stack: ["React", "TypeScript", "Vite", "Tailwind"],
+    problem: "Donors and sponsors lacked a transparent, easy-to-use platform to discover orphans in need and manage ongoing sponsorships.",
+    built: "A charity platform with orphan profiles, sponsorship flows, donation tracking, and an admin-ready content structure.",
+    features: ["Orphan discovery and sponsorship matching", "Donation and sponsorship management flows", "Responsive, accessible interface for all devices"],
+    value: "Increased donor trust and engagement by making the sponsorship journey clear, trackable, and emotionally compelling.",
+    github: "https://github.com/Kholoud93/Orphany",
+    live: "https://orphany.vercel.app/",
+    img: orphanyImage,
+  },
 ];
 
 const additionalProjects = [
   {
-    n: "05",
+    n: "06",
     name: "Megabox",
     type: "E-commerce Platform",
     summary:
@@ -100,7 +116,7 @@ const additionalProjects = [
     live: "https://megabox-eight.vercel.app/",
   },
   {
-    n: "06",
+    n: "07",
     name: "Qebaa Clinic",
     type: "Healthcare Website",
     summary:
@@ -114,7 +130,7 @@ const additionalProjects = [
     live: "https://qebaa-clinic.vercel.app/",
   },
   {
-    n: "07",
+    n: "08",
     name: "Depth-wave",
     type: "Interactive Frontend Experiment",
     summary:
